@@ -1,4 +1,3 @@
-var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
 
@@ -22,7 +21,10 @@ app.use("/users", usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  next(createError(404));
+  res.json({
+    message: "Page not found",
+    status: 404,
+  });
 });
 
 // error handler
