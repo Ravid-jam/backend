@@ -8,6 +8,10 @@ var usersRouter = require("./routes/users");
 var app = express();
 require("dotenv").config();
 // view engine setup
+var mongoose = require("mongoose");
+mongoose
+  .connect("mongodb+srv://admin:admin@cluster0.ozdxf.mongodb.net/chat")
+  .then(() => console.log("MongoDB Successfully Connected"));
 
 app.use(logger("dev"));
 app.use(express.json());
