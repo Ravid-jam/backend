@@ -1,6 +1,5 @@
 var createError = require("http-errors");
 var express = require("express");
-const dotenv = require("dotenv");
 var path = require("path");
 
 var cookieParser = require("cookie-parser");
