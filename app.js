@@ -1,11 +1,12 @@
 var express = require("express");
+var cors = require("cors");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 
 var app = express();
+app.use(cors());
 require("dotenv").config();
 // view engine setup
 var mongoose = require("mongoose");
@@ -24,7 +25,7 @@ app.use("/users", usersRouter);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   res.json({
-    message: "Hello , welcome to Backend",
+    message: "Hello , welcome to backend",
     status: 200,
   });
 });

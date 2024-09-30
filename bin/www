@@ -7,10 +7,7 @@
 var app = require("../app");
 var debug = require("debug")("demo:server");
 var http = require("http");
-var mongoose = require("mongoose");
-mongoose
-  .connect("mongodb+srv://admin:admin@cluster0.ozdxf.mongodb.net/chat")
-  .then(() => console.log("MongoDB Successfully Connected"));
+
 
 /**
  * Get port from environment and store in Express.
